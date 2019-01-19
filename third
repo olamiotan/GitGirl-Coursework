@@ -1,0 +1,25 @@
+import numpy as np
+
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+revenue = [145, 760, 861, 917, 805, 810, 114, 976, 103, 143, 107, 154]
+expenses = [120, 569, 123, 120, 865, 840, 328, 582, 697, 166, 100, 380]
+
+a = np.array(revenue, int)
+b = np.array(expenses, int)
+profit = a - b
+print (profit)
+
+Fin_status = dict(zip(months,profit))
+print ("\nFinancial status = " + str(Fin_status))
+
+import pandas as pd
+new_series = pd.Series(Fin_status, name='Fin_status')
+print ("\nThe new way the financial status looks like:\n" + str(new_series))
+
+import matplotlib.pyplot as plt
+new_series.plot.line()
+plt.title('Profits made from January to December', fontsize=14)
+plt.xlabel('Months', fontsize=14)
+plt.ylabel('Profits', fontsize=14)
+plt.grid(True)
+plt.show()
