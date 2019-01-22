@@ -8,8 +8,13 @@ expenses = [120, 569, 123, 120, 865, 840, 328, 582, 697, 166, 100, 380]
 a = np.array(revenue, int)
 b = np.array(expenses, int)
 profit = a - b
-print (profit)
+print("Financial data for ABD company for a year: ")
+print("\tMonths= ", months)
+print("\tRevenue= ", revenue)
+print("\tExpenses= ", expenses)
+print("Profit made from January to December= ", profit)
 
+#code extracting two lists into a dictionary
 Fin_status = dict(zip(months,profit))
 print ("\nFinancial status = " + str(Fin_status))
 
@@ -26,3 +31,4 @@ plt.xlabel('Months', fontsize=14)
 plt.ylabel('Profits', fontsize=14)
 plt.grid(True)
 plt.show()
+
