@@ -1,3 +1,4 @@
+#using numpy and deriving profit from lists of revenue and expenses
 import numpy as np
 
 months = ['Jan', 'Feb', 'Mar', 'Apr', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -12,10 +13,12 @@ print (profit)
 Fin_status = dict(zip(months,profit))
 print ("\nFinancial status = " + str(Fin_status))
 
+#using Pandas series 
 import pandas as pd
 new_series = pd.Series(Fin_status, name='Fin_status')
 print ("\nThe new way the financial status looks like:\n" + str(new_series))
 
+#using matplotlib to plot a line graph
 import matplotlib.pyplot as plt
 new_series.plot.line()
 plt.title('Profits made from January to December', fontsize=14)
