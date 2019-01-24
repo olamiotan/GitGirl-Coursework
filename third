@@ -8,11 +8,8 @@ expenses = [120, 569, 123, 120, 865, 840, 328, 582, 697, 166, 100, 380]
 a = np.array(revenue, int)
 b = np.array(expenses, int)
 profit = a - b
-print("Financial data for ABD company for a year: ")
-print("\tMonths = ", months)
-print("\tRevenue = ", revenue)
-print("\tExpenses = ", expenses)
-print("Profit made from January to December = ", profit)
+
+print("\nProfit made from January to December = ", profit)
 
 #code extracting two lists into a dictionary
 Fin_status = dict(zip(months,profit))
@@ -21,7 +18,7 @@ print ("\nFinancial status = ", Fin_status)
 #using Pandas series 
 import pandas as pd
 new_series = pd.Series(Fin_status, name='Fin_status')
-print ("\nThe new way the financial status looks like:\n", new_series)
+print ("\nFinancial status in panda series:\n", new_series)
 
 #using matplotlib to plot a line graph
 import matplotlib.pyplot as plt
