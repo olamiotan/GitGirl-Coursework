@@ -9,7 +9,7 @@ named_movie
 
 #sort movies by their release dates
 sortedmovies = movies.sort_values('release_date')
-sortedmovies = sortedmovies.loc[:, ['release_date', 'budget', 'revenue', 'runtime']]
+sortedmovies = sortedmovies.loc[:, ['title', 'release_date', 'budget', 'revenue', 'runtime']]
 sortedmovies
 
 #show movies which generated over 2 million with less than 1 million
