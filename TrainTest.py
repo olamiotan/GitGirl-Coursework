@@ -4,6 +4,7 @@
 #Import libraries
 import numpy as np 
 import pandas as pd 
+from pandas import DataFrame
 from sklearn import metrics
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -66,3 +67,8 @@ test_data['Survived'] = survival
 print('Test data with new predicted column Survived: ', test_data())
 
 #Prediction of survival is 0 for male and 1 for female
+
+#save to a dataframe and export to a csv file
+df = DataFrame(test_data, columns= ['PassengerId', 'Survived'])
+export_csv = df.to_csv (r'C://Users/Olamiotan/Desktop/survival.csv', index = None, header=True) 
+export_csv
