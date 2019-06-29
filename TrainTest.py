@@ -71,4 +71,4 @@ print('Test data with new predicted column Survived: ', test_data())
 #save to a dataframe and export to a csv file
 df = DataFrame(test_data, columns= ['PassengerId', 'Survived'])
 export_csv = df.to_csv (r'C://Users/Olamiotan/Desktop/survival.csv', index = None, header=True) 
-export_csv
+print('Successful.', export_csv)
